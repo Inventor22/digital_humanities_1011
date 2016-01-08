@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9715,        248]
-NotebookOptionsPosition[      9356,        231]
-NotebookOutlinePosition[      9703,        246]
-CellTagsIndexPosition[      9660,        243]
+NotebookDataLength[      9842,        250]
+NotebookOptionsPosition[      9483,        233]
+NotebookOutlinePosition[      9830,        248]
+CellTagsIndexPosition[      9787,        245]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -159,7 +159,7 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"xStep", "*", "3"}], "+", "barLength"}], ")"}], "/", 
             "2"}], ",", " ", 
-           RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+           RowBox[{"-", ".8"}]}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{"Graphics", "[", 
     RowBox[{"Join", "[", 
@@ -196,7 +196,8 @@ Cell[BoxData[
    3.661278017484582*^9, 3.661278054911589*^9}, {3.6612788659303837`*^9, 
    3.661278893950269*^9}, {3.661278971018154*^9, 3.661279000997428*^9}, {
    3.6612790499856377`*^9, 3.661279071527938*^9}, {3.6612791195220013`*^9, 
-   3.661279122145947*^9}, {3.661279153085437*^9, 3.6612791571055546`*^9}}],
+   3.661279122145947*^9}, {3.661279153085437*^9, 3.6612791571055546`*^9}, {
+   3.661279461906266*^9, 3.661279466149466*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{GeometricTransformationBox[{
@@ -214,7 +215,7 @@ Cell[BoxData[
    {RGBColor[0.5, 0, 0.5], InsetBox[
      StyleBox["\<\"Western Engineering\"\>",
       StripOnInput->False,
-      FontSize->Large], {4.1, -1}]}}]], "Output",
+      FontSize->Large], {4.1, -0.8}]}}]], "Output",
  CellChangeTimes->{{3.661277101591428*^9, 3.661277116603645*^9}, 
    3.6612773523380327`*^9, {3.6612774238313985`*^9, 3.661277451344475*^9}, 
    3.6612774871414404`*^9, 3.66127755804051*^9, {3.6612776284833937`*^9, 
@@ -222,7 +223,8 @@ Cell[BoxData[
    3.6612777828807917`*^9, 3.6612778047754345`*^9}, {3.6612779222992935`*^9, 
    3.661277947863636*^9}, {3.6612780211378746`*^9, 3.661278055333386*^9}, {
    3.6612788671642404`*^9, 3.6612788775501347`*^9}, 3.6612790761438527`*^9, 
-   3.6612791226097794`*^9}]
+   3.6612791226097794`*^9, 3.661279159621408*^9, {3.661279463295531*^9, 
+   3.6612794664084687`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -246,10 +248,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 7221, 176, 292, "Input"],
-Cell[7804, 200, 1412, 24, 222, "Output"]
+Cell[580, 22, 7272, 177, 292, "Input"],
+Cell[7855, 201, 1488, 25, 248, "Output"]
 }, Open  ]],
-Cell[9231, 227, 121, 2, 31, "Input"]
+Cell[9358, 229, 121, 2, 31, "Input"]
 }
 ]
 *)
