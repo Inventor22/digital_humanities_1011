@@ -10,16 +10,40 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16160,        339]
-NotebookOptionsPosition[     15838,        323]
-NotebookOutlinePosition[     16185,        338]
-CellTagsIndexPosition[     16142,        335]
+NotebookDataLength[     17480,        367]
+NotebookOptionsPosition[     17083,        348]
+NotebookOutlinePosition[     17430,        363]
+CellTagsIndexPosition[     17387,        360]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell[TextData[{
+ "Digital Humanities 1011 - Assignment 5\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10\n", 
+  "Subsubsection"],
+ StyleBox["Description:  This assignment utilizes  the translate, rotate, and \
+scale functions in ", "Text"],
+ StyleBox["Mathematica", "Text",
+  FontSlant->"Italic"],
+ StyleBox[".  Show below is a command to take the person drawn in one of the \
+previous assignments, and draw several of them as they spiral outwards, \
+always facing towards the center of the circle, and growing in size \
+sequentially.  The position, rotation, and size are all driven from the \
+angle, in radians, that the person is drawn at.", "Text"]
+}], "Chapter",
+ CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
+  3.66139319310596*^9, 3.661393194709409*^9}, {3.661393404689396*^9, 
+  3.6613934633448725`*^9}, {3.6613935505848503`*^9, 3.6613936481167345`*^9}, {
+  3.6613936885725517`*^9, 3.6613938075129027`*^9}, {3.661393878284881*^9, 
+  3.6613938839005065`*^9}, {3.6613940423809085`*^9, 3.661394088136281*^9}, {
+  3.6613942143119698`*^9, 3.6613943155116835`*^9}, {3.661394404959981*^9, 
+  3.66139440688628*^9}, {3.661394653019172*^9, 3.661394850134879*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -320,9 +344,10 @@ Cell[BoxData[
    3.661311870965476*^9, {3.6613119707001534`*^9, 3.6613120469592795`*^9}, 
    3.661312122448047*^9, 3.661312186908492*^9}]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{1278, 1348},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -338,8 +363,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 3481, 90, 292, "Input"],
-Cell[4064, 114, 11758, 206, 312, "Output"]
+Cell[580, 22, 1208, 20, 222, "Chapter"],
+Cell[CellGroupData[{
+Cell[1813, 46, 3481, 90, 292, "Input"],
+Cell[5297, 138, 11758, 206, 312, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

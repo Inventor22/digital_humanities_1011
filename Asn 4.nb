@@ -10,26 +10,50 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13582,        363]
-NotebookOptionsPosition[     13033,        341]
-NotebookOutlinePosition[     13380,        356]
-CellTagsIndexPosition[     13337,        353]
+NotebookDataLength[     14915,        394]
+NotebookOptionsPosition[     14291,        369]
+NotebookOutlinePosition[     14638,        384]
+CellTagsIndexPosition[     14595,        381]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell[TextData[{
+ "Digital Humanities 1011 - Assignment 4\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10\n", 
+  "Subsubsection"],
+ StyleBox["Description:  This assignment makes use of the opacity feature of \
+", "Text"],
+ StyleBox["Mathematica", "Text",
+  FontSlant->"Italic"],
+ StyleBox[".  Shown below is a scenic moutain view with a road leading off \
+into the sunset.  Also a translucent hitchhiker for no other reason than to \
+demonstrate the opacity feature.", "Text"]
+}], "Chapter",
+ CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
+  3.66139319310596*^9, 3.661393194709409*^9}, {3.661393404689396*^9, 
+  3.6613934633448725`*^9}, {3.6613935505848503`*^9, 3.6613936481167345`*^9}, {
+  3.6613936885725517`*^9, 3.6613938075129027`*^9}, {3.661393878284881*^9, 
+  3.6613938839005065`*^9}, {3.6613940423809085`*^9, 3.661394088136281*^9}, {
+  3.6613942143119698`*^9, 3.6613943155116835`*^9}, {3.661394404959981*^9, 
+  3.66139440688628*^9}, {3.661394642067196*^9, 3.6613946421391373`*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
-   RowBox[{"Graphics", "[", 
-    RowBox[{"{", 
-     RowBox[{"Thick", ",", 
-      RowBox[{"Line", "[", 
-       RowBox[{"{", 
-        RowBox[{"CirclePoints", "[", "6", "]"}], "}"}], "]"}]}], " ", "}"}], 
-    "]"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{"{", 
+      RowBox[{"Thick", ",", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{"CirclePoints", "[", "6", "]"}], "}"}], "]"}]}], " ", "}"}], 
+     "]"}], "  ", "did", " ", "not", " ", "work"}], "*)"}], 
+  "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"drawPerson", "[", 
@@ -233,17 +257,20 @@ Cell[BoxData[
           RowBox[{"{", 
            RowBox[{
             RowBox[{"1", "/", "4"}], ",", 
-            RowBox[{"1", "/", "4"}]}], "}"}]}], "]"}]}], "}"}]}], 
+            RowBox[{"1", "/", "4"}]}], "}"}]}], "]"}]}], "}"}]}], " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"Invisible", " ", "man"}], "..."}], " ", "*)"}], 
      "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}]}]}]], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQBGIQvS5NKzHJ/bWjYM6qJhC9LsyxC0S33F4+AURrLbo8
+1:eJxTTMoPSmViYGCQAmIQvS5NKzHJ/bWjYM6qJhC9LsyxC0S33F4+AURrLbo8
 E0SrMXAsA9FTlCo3gOjH30Q3gugDN+z3gmnJE4dAdJjP/eMgetrS89dB9PzF
 +ozJQPoThwI/iD7FfksGROs53ZcH0XnPZmqD6Bi2NxYgepM/kz2IfrG/3hFE
 73i3MQRETwipjwfR0v/OJYPoeSatk0B0lZv5YhC9S+LiVhA9637ZbhBdM1n1
 JogOlJr9CETz8G9+CqJtNPe/AtFHXX+Cacb45e/B7ln+8h+IZiiqYksB0iXl
 jWA6VnkFN4jed/6XCIhe1a4pBaLbN76QA9HOypqqIHpigaEGiH5dqmYDol1i
-3tmC6AMXHJ1AtC5/jSfY3PrDgSD6kkJqOIj2+pa3CETf7Hy+BEQDAEhpvhs=
-
+3tmC6AMXHJ1AtC5/jSfY3PrDgSD6kkJqOIj2+pa3CETf7Hy+BESr7uaQ6gPS
+3z2/KYBoAGXnxXY=
   "]],
 
 Cell[BoxData[
@@ -338,9 +365,10 @@ Cell[BoxData[""], "Input",
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.6613072932937174`*^9, 3.6613072933042336`*^9}}]
+}, Open  ]]
 },
 WindowSize->{1278, 1348},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -356,15 +384,18 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 7949, 224, 492, "Input"],
-Cell[8532, 248, 3904, 72, 447, "Output"]
+Cell[580, 22, 1033, 18, 203, "Chapter"],
+Cell[CellGroupData[{
+Cell[1638, 44, 8137, 229, 492, "Input"],
+Cell[9778, 275, 3904, 72, 447, "Output"]
 }, Open  ]],
-Cell[12451, 323, 96, 1, 31, "Input"],
-Cell[12550, 326, 94, 1, 31, "Input"],
-Cell[12647, 329, 92, 1, 31, "Input"],
-Cell[12742, 332, 94, 1, 31, "Input"],
-Cell[12839, 335, 91, 1, 31, "Input"],
-Cell[12933, 338, 96, 1, 31, "Input"]
+Cell[13697, 350, 96, 1, 31, "Input"],
+Cell[13796, 353, 94, 1, 31, "Input"],
+Cell[13893, 356, 92, 1, 31, "Input"],
+Cell[13988, 359, 94, 1, 31, "Input"],
+Cell[14085, 362, 91, 1, 31, "Input"],
+Cell[14179, 365, 96, 1, 31, "Input"]
+}, Open  ]]
 }
 ]
 *)

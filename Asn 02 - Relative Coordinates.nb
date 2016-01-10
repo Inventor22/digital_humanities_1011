@@ -10,83 +10,99 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12290,        269]
-NotebookOptionsPosition[     11970,        253]
-NotebookOutlinePosition[     12317,        268]
-CellTagsIndexPosition[     12274,        265]
+NotebookDataLength[     12952,        290]
+NotebookOptionsPosition[     12558,        271]
+NotebookOutlinePosition[     12905,        286]
+CellTagsIndexPosition[     12862,        283]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+Cell[TextData[{
+ "Digital Humanities 1011 - Assignment 2\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10\n\n", 
+  "Subsubsection"],
+ StyleBox["Description: This assignment uses relative coordinates to draw a \
+picture on the screen, and the ", "Text"],
+ StyleBox["Table", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" function to generate the coordinates for a series of said \
+pictures", "Text"]
+}], "Chapter",
+ CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
+  3.66139319310596*^9, 3.661393194709409*^9}, {3.6613932930130606`*^9, 
+  3.6613933646731424`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
   RowBox[{
-   RowBox[{
-    RowBox[{"drawPerson", "[", 
-     RowBox[{"{", 
-      RowBox[{"x_", ",", " ", "y_"}], "}"}], "]"}], " ", ":=", " ", 
+   RowBox[{"drawPerson", "[", 
     RowBox[{"{", 
-     RowBox[{"Black", ",", " ", 
-      RowBox[{"Line", "[", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"x", ",", " ", "y"}], "}"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"x", "+", "1"}], ",", " ", 
-           RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"x", "+", "2"}], ",", " ", "y"}], "}"}]}], "}"}], "]"}], 
-      ",", " ", 
-      RowBox[{"Line", "[", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"x", "+", "1"}], ",", " ", 
-           RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"x", "+", "1"}], ",", " ", 
-           RowBox[{"y", "+", "4.5"}]}], "}"}]}], "}"}], "]"}], ",", 
-      RowBox[{"Line", "[", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"x", ",", 
-           RowBox[{"y", "+", "3.8"}]}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"x", "+", "2"}], ",", 
-           RowBox[{"y", "+", "3.8"}]}], "}"}]}], "}"}], "]"}], ",", " ", 
-      RowBox[{"Circle", "[", 
+     RowBox[{"x_", ",", " ", "y_"}], "}"}], "]"}], " ", ":=", " ", 
+   RowBox[{"{", 
+    RowBox[{"Black", ",", " ", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", " ", "y"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "1"}], ",", " ", 
+          RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "2"}], ",", " ", "y"}], "}"}]}], "}"}], "]"}], 
+     ",", " ", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
          RowBox[{
           RowBox[{"x", "+", "1"}], ",", " ", 
-          RowBox[{"y", "+", "4.5", "+", ".5"}]}], "}"}], ",", " ", ".5"}], 
-       "]"}]}], "}"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"Graphics", "[", 
-    RowBox[{"Table", "[", 
-     RowBox[{
-      RowBox[{"drawPerson", "[", 
+          RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "1"}], ",", " ", 
+          RowBox[{"y", "+", "4.5"}]}], "}"}]}], "}"}], "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"y", "+", "3.8"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "2"}], ",", 
+          RowBox[{"y", "+", "3.8"}]}], "}"}]}], "}"}], "]"}], ",", " ", 
+     RowBox[{"Circle", "[", 
+      RowBox[{
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"x", "*", "3"}], ",", 
-         RowBox[{"Sin", "[", "x", "]"}]}], "}"}], "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"x", ",", " ", "0", ",", " ", 
-        RowBox[{"3", "*", "Pi"}], ",", " ", 
-        RowBox[{"Pi", "/", "4"}]}], "}"}]}], "]"}], "]"}]}]}]], "Input",
+         RowBox[{"x", "+", "1"}], ",", " ", 
+         RowBox[{"y", "+", "4.5", "+", ".5"}]}], "}"}], ",", " ", ".5"}], 
+      "]"}]}], "}"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"drawPerson", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "*", "3"}], ",", 
+       RowBox[{"Sin", "[", "x", "]"}]}], "}"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", 
+      RowBox[{"3", "*", "Pi"}], ",", " ", 
+      RowBox[{"Pi", "/", "4"}]}], "}"}]}], "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.6612802849391537`*^9, 3.6612805560712976`*^9}, {
   3.6612806054152174`*^9, 3.661280688423148*^9}, {3.661281265712083*^9, 
   3.6612813197817836`*^9}, {3.6612814279385777`*^9, 3.661281487613593*^9}, {
   3.6612816099417133`*^9, 3.6612816422978506`*^9}, {3.6612816907299347`*^9, 
-  3.6612817895656137`*^9}}],
+  3.6612817895656137`*^9}, {3.6613932796535916`*^9, 3.661393280117406*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{
@@ -248,11 +264,13 @@ Cell[BoxData[
       3.8}, {30.274333882308138`, 3.8}}]], 
     CircleBox[NCache[{1 + 9 Pi, 5.}, {29.274333882308138`, 5.}], 
      0.5]}}]], "Output",
- CellChangeTimes->{3.661312499321456*^9}]
+ CellChangeTimes->{3.661312499321456*^9, 3.6613932888348556`*^9, 
+  3.6613933665180187`*^9}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1278, 1348},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -268,8 +286,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 2447, 66, 152, "Input"],
-Cell[3030, 90, 8924, 160, 115, "Output"]
+Cell[580, 22, 603, 13, 215, "Chapter"],
+Cell[CellGroupData[{
+Cell[1208, 39, 2344, 65, 92, "Input"],
+Cell[3555, 106, 8975, 161, 115, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

@@ -10,16 +10,48 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38676,        716]
-NotebookOptionsPosition[     38315,        699]
-NotebookOutlinePosition[     38662,        714]
-CellTagsIndexPosition[     38619,        711]
+NotebookDataLength[     40427,        752]
+NotebookOptionsPosition[     39991,        732]
+NotebookOutlinePosition[     40338,        747]
+CellTagsIndexPosition[     40295,        744]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell[TextData[{
+ "Digital Humanities 1011 - Assignment 6\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10\n", 
+  "Subsubsection"],
+ StyleBox["Description:  This assignment demonstrates the use of Bezier \
+curves.  In the example for this assignment, bezier curves were used to \
+generate single pedals for a flower, which were then repeated in a circle to \
+produce a flower.  I have extended this idea to draw an entire closed-loop \
+bezier curve \[OpenCurlyQuote]flower\[CloseCurlyQuote].  This is done by \
+generating a series of via points around a circle of radius ", "Text"],
+ StyleBox["r", "Text",
+  FontSlant->"Italic"],
+ StyleBox[", where every ", "Text"],
+ StyleBox["n-th", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" point is drawn closer to the center of the circle.  This is \
+accomplished by a supplemental function which returns the radius to draw the \
+point at, determined by the modulus operator.  By doing so, this produces a \
+uniform-looking flower.", "Text"]
+}], "Chapter",
+ CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
+  3.66139319310596*^9, 3.661393194709409*^9}, {3.661393404689396*^9, 
+  3.6613934633448725`*^9}, {3.6613935505848503`*^9, 3.6613936481167345`*^9}, {
+  3.6613936885725517`*^9, 3.6613938075129027`*^9}, {3.661393878284881*^9, 
+  3.6613938839005065`*^9}, {3.6613940423809085`*^9, 3.661394088136281*^9}, {
+  3.6613942143119698`*^9, 3.6613943155116835`*^9}, {3.661394404959981*^9, 
+  3.66139440688628*^9}, {3.661394867754696*^9, 3.661394954166636*^9}, {
+  3.6613949869830008`*^9, 3.6613950774790106`*^9}, {3.661395178458521*^9, 
+  3.6613953268838935`*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -696,9 +728,10 @@ Cell[BoxData[
 
 Cell[BoxData["|"], "Input",
  CellChangeTimes->{3.661314798184295*^9}]
+}, Open  ]]
 },
 WindowSize->{1278, 1348},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -714,10 +747,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4352, 115, 372, "Input"],
-Cell[4935, 139, 33292, 554, 540, "Output"]
+Cell[580, 22, 1639, 28, 241, "Chapter"],
+Cell[CellGroupData[{
+Cell[2244, 54, 4352, 115, 372, "Input"],
+Cell[6599, 171, 33292, 554, 540, "Output"]
 }, Open  ]],
-Cell[38242, 696, 69, 1, 31, "Input"]
+Cell[39906, 728, 69, 1, 31, "Input"]
+}, Open  ]]
 }
 ]
 *)

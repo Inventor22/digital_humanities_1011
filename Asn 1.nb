@@ -10,28 +10,27 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10678,        283]
-NotebookOptionsPosition[     10120,        261]
-NotebookOutlinePosition[     10466,        276]
-CellTagsIndexPosition[     10423,        273]
+NotebookDataLength[      9741,        256]
+NotebookOptionsPosition[      9348,        237]
+NotebookOutlinePosition[      9695,        252]
+CellTagsIndexPosition[      9652,        249]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell[TextData[{
+ "Digital Humanities 1011 - Assignment 1\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10", 
+  "Subsubsection"]
+}], "Chapter",
+ CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
+  3.66139319310596*^9, 3.661393194709409*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
- StyleBox[
-  RowBox[{
-   RowBox[{"Digital", " ", "Humanities", " ", "1011"}], " ", "-", " ", 
-   RowBox[{"Assignment", " ", "1"}]}], "Section"], "\[IndentingNewLine]", 
- StyleBox[
-  RowBox[{"Name", ":", " ", 
-   RowBox[{"Dustin", " ", "Dobransky"}]}], "Text"], "\[IndentingNewLine]", 
- RowBox[{
-  StyleBox[
-   RowBox[{"Id", ":", " ", "250575030"}], "Text"], 
-  StyleBox["\[IndentingNewLine]", "Text"]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"xStep", " ", "=", " ", "1.4"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -209,25 +208,9 @@ Cell[BoxData[{
    3.6613670939870863`*^9}, {3.661367191453867*^9, 3.661367218361752*^9}, {
    3.6613676378958178`*^9, 3.6613677292555666`*^9}, {3.66136785020188*^9, 
    3.6613678580207043`*^9}, {3.661367927201205*^9, 3.6613680592333713`*^9}, {
-   3.661368310693774*^9, 3.661368320097621*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"-", "Assignment"}], "+", 
-  RowBox[{"1011", " ", "Digital", " ", "Humanities"}]}]], "Output",
- CellChangeTimes->{{3.6613680468723273`*^9, 3.661368077904862*^9}, {
-  3.661368325733813*^9, 3.6613683286750712`*^9}}],
-
-Cell[BoxData[
- RowBox[{"Name", ":", 
-  RowBox[{"Dobransky", " ", "Dustin"}]}]], "Output",
- CellChangeTimes->{{3.6613680468723273`*^9, 3.661368077904862*^9}, {
-  3.661368325733813*^9, 3.661368328678078*^9}}],
-
-Cell[BoxData[
- RowBox[{"Id", ":", "250575030"}]], "Output",
- CellChangeTimes->{{3.6613680468723273`*^9, 3.661368077904862*^9}, {
-  3.661368325733813*^9, 3.661368328679076*^9}}],
+   3.661368310693774*^9, 3.661368320097621*^9}, {3.6613928489350023`*^9, 
+   3.661392861054905*^9}, {3.661392958522241*^9, 3.661392960454259*^9}, 
+   3.661393048466529*^9}],
 
 Cell[BoxData[
  GraphicsBox[{GeometricTransformationBox[{
@@ -247,20 +230,13 @@ Cell[BoxData[
       StripOnInput->False,
       FontSize->Large], {4.1, -0.8}]}}]], "Output",
  CellChangeTimes->{{3.6613680468723273`*^9, 3.661368077904862*^9}, {
-  3.661368325733813*^9, 3.6613683286880827`*^9}}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.661368075659626*^9, 3.661368075666629*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{
-  3.6612776407773376`*^9, {3.6612790657928896`*^9, 3.661279066918145*^9}}]
+   3.661368325733813*^9, 3.6613683286750712`*^9}, {3.661392601018571*^9, 
+   3.6613926234340925`*^9}, 3.6613929778399754`*^9, 3.661393178152912*^9}]
+}, Open  ]]
+}, Open  ]]
 },
-WindowSize->{1278, 901},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowSize->{1278, 1348},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -276,15 +252,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 7652, 189, 344, "Input"],
-Cell[8235, 213, 247, 5, 31, "Output"],
-Cell[8485, 220, 206, 4, 31, "Output"],
-Cell[8694, 226, 176, 3, 31, "Output"],
-Cell[8873, 231, 983, 18, 215, "Output"]
-}, Open  ]],
-Cell[9871, 252, 26, 0, 31, "Input"],
-Cell[9900, 254, 92, 1, 31, InheritFromParent],
-Cell[9995, 257, 121, 2, 31, "Input"]
+Cell[580, 22, 282, 6, 165, "Chapter"],
+Cell[CellGroupData[{
+Cell[887, 32, 7348, 180, 252, "Input"],
+Cell[8238, 214, 1082, 19, 215, "Output"]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
