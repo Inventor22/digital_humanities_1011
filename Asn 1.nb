@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9741,        256]
-NotebookOptionsPosition[      9348,        237]
-NotebookOutlinePosition[      9695,        252]
-CellTagsIndexPosition[      9652,        249]
+NotebookDataLength[     10631,        275]
+NotebookOptionsPosition[     10236,        256]
+NotebookOutlinePosition[     10583,        271]
+CellTagsIndexPosition[     10540,        268]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,11 +22,20 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[TextData[{
  "Digital Humanities 1011 - Assignment 1\n",
- StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10", 
-  "Subsubsection"]
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-01-10\n", 
+  "Subsubsection"],
+ StyleBox["Description:  This assignment familiarizes the student with the \
+use of basic geometric objectis in the ", "Text"],
+ StyleBox["Mathematica", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" language.  Shown below is a remake of the Western Engineering \
+Logo.  The shear of the logo was performed by a shearing geometric \
+transformation -- a concept learned from my class in Image Processing.", 
+  "Text"]
 }], "Chapter",
  CellChangeTimes->{{3.6613928757937827`*^9, 3.6613929172700324`*^9}, {
-  3.66139319310596*^9, 3.661393194709409*^9}}],
+  3.66139319310596*^9, 3.661393194709409*^9}, {3.661395790501459*^9, 
+  3.6613958932698193`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -36,7 +45,10 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"barLength", " ", "=", " ", "4"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"barWidth", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"barWidth", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"vertical", " ", "bars"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"vb0", " ", "=", " ", 
    RowBox[{"{", 
@@ -68,20 +80,23 @@ Cell[BoxData[{
          "barLength"}], "}"}]}], "]"}]}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"vb2", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{"Purple", ",", " ", 
-     RowBox[{"Rectangle", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"xStep", "*", "2"}], ",", " ", "0"}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
+  RowBox[{
+   RowBox[{"vb2", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{"Purple", ",", " ", 
+      RowBox[{"Rectangle", "[", 
+       RowBox[{
+        RowBox[{"{", 
          RowBox[{
-          RowBox[{"xStep", "*", "2"}], "+", "barWidth"}], ",", " ", 
-         "barLength"}], "}"}]}], "]"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+          RowBox[{"xStep", "*", "2"}], ",", " ", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"xStep", "*", "2"}], "+", "barWidth"}], ",", " ", 
+          "barLength"}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"horizontal", " ", "bars"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"hb0", " ", "=", " ", 
    RowBox[{"{", 
@@ -119,21 +134,25 @@ Cell[BoxData[{
            RowBox[{"barLength", "+", "barWidth"}], ")"}], "/", "2"}]}], 
         "}"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"hb2", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{"Purple", ",", " ", 
-     RowBox[{"Rectangle", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"xStep", "*", "3"}], ",", " ", 
-         RowBox[{"barLength", "-", "barWidth"}]}], "}"}], ",", " ", 
-       RowBox[{"{", 
-        RowBox[{
+  RowBox[{
+   RowBox[{"hb2", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{"Purple", ",", " ", 
+      RowBox[{"Rectangle", "[", 
+       RowBox[{
+        RowBox[{"{", 
          RowBox[{
-          RowBox[{"xStep", "*", "3"}], "+", "barLength"}], ",", " ", 
-         "barLength"}], "}"}]}], "]"}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+          RowBox[{"xStep", "*", "3"}], ",", " ", 
+          RowBox[{"barLength", "-", "barWidth"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"xStep", "*", "3"}], "+", "barLength"}], ",", " ", 
+          "barLength"}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"shear", " ", "the", " ", "logo", " ", "15", " ", "degrees"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Logo", " ", "=", " ", 
    RowBox[{"{", 
@@ -210,7 +229,7 @@ Cell[BoxData[{
    3.6613678580207043`*^9}, {3.661367927201205*^9, 3.6613680592333713`*^9}, {
    3.661368310693774*^9, 3.661368320097621*^9}, {3.6613928489350023`*^9, 
    3.661392861054905*^9}, {3.661392958522241*^9, 3.661392960454259*^9}, 
-   3.661393048466529*^9}],
+   3.661393048466529*^9, {3.6613960449736357`*^9, 3.6613960805692425`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{GeometricTransformationBox[{
@@ -252,10 +271,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 282, 6, 165, "Chapter"],
+Cell[580, 22, 750, 15, 203, "Chapter"],
 Cell[CellGroupData[{
-Cell[887, 32, 7348, 180, 252, "Input"],
-Cell[8238, 214, 1082, 19, 215, "Output"]
+Cell[1355, 41, 7768, 190, 312, "Input"],
+Cell[9126, 233, 1082, 19, 215, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
