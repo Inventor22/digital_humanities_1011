@@ -1,0 +1,423 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21678,        414]
+NotebookOptionsPosition[     21316,        397]
+NotebookOutlinePosition[     21661,        412]
+CellTagsIndexPosition[     21618,        409]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+  RowBox[{"Raster", "[", "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "-", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"x", "*", 
+          RowBox[{"Pi", "/", "9"}]}], "]"}]}], ",", " ", 
+       RowBox[{"1", "-", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"y", "*", 
+          RowBox[{"Pi", "/", "9"}]}], "]"}]}], ",", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "+", "y"}], ")"}], "*", 
+         RowBox[{"Pi", "/", 
+          RowBox[{"(", 
+           RowBox[{"9", "*", "2"}], ")"}]}]}], "]"}]}], "}"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Hue", "[", 
+       RowBox[{"x", "/", "10"}], "]"}], "*)"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", "9", ",", " ", "1"}], "}"}], ",", 
+     " ", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", " ", "0", ",", " ", "9", ",", " ", "1"}], "}"}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+  RowBox[{"Raster", "[", "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"RandomReal", "[", "]"}], ",", 
+       RowBox[{"RandomReal", "[", "]"}], ",", 
+       RowBox[{"RandomReal", "[", "]"}]}], "}"}], "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Hue", "[", 
+       RowBox[{"x", "/", "10"}], "]"}], "*)"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "0", ",", " ", "9", ",", " ", "1"}], "}"}], ",", 
+     " ", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", " ", "0", ",", " ", "9", ",", " ", "1"}], "}"}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.6635998260839415`*^9, 3.6635998396000824`*^9}, {
+   3.6636002360370274`*^9, 3.6636002363037653`*^9}, {3.6636003361147633`*^9, 
+   3.66360035400415*^9}, 3.6636017438642817`*^9, {3.6636019768174863`*^9, 
+   3.6636020042032924`*^9}, {3.6636021238257604`*^9, 3.663602126191626*^9}, {
+   3.663602251738666*^9, 3.663602283285322*^9}, {3.6636024220180845`*^9, 
+   3.6636024725738316`*^9}, {3.6636025617099257`*^9, 3.663602596410736*^9}, {
+   3.663602751282275*^9, 3.663602850290273*^9}, {3.663603536256302*^9, 
+   3.6636035649641023`*^9}, {3.663603600982013*^9, 3.6636037435432253`*^9}, {
+   3.663603893679239*^9, 3.6636039454132633`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  RasterBox[
+   NCache[{{{1, 1, 0}, {
+      1, 1 - Sin[Rational[1, 9] Pi], Sin[Rational[1, 18] Pi]}, {
+      1, 1 - Sin[Rational[2, 9] Pi], Sin[Rational[1, 9] Pi]}, {
+      1, 1 + Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2]}, {
+      1, 1 - Cos[Rational[1, 18] Pi], Sin[Rational[2, 9] Pi]}, {
+      1, 1 - Cos[Rational[1, 18] Pi], Cos[Rational[2, 9] Pi]}, {
+      1, 1 + Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1, 1 - Sin[Rational[2, 9] Pi], Cos[Rational[1, 9] Pi]}, {
+      1, 1 - Sin[Rational[1, 9] Pi], Cos[Rational[1, 18] Pi]}, {1, 1, 1}}, {{
+      1 - Sin[Rational[1, 9] Pi], 1, Sin[Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Sin[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Rational[
+       1, 2]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Sin[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[1, 9] Pi], 1}, {
+      1 - Sin[Rational[1, 9] Pi], 1, Cos[Rational[1, 18] Pi]}}, {{
+      1 - Sin[Rational[2, 9] Pi], 1, Sin[Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Rational[
+       1, 2]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Sin[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[2, 9] Pi], 1}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1, Cos[Rational[1, 9] Pi]}}, {{
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1, Rational[1, 2]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[1, 9] Pi], Sin[
+       Rational[2, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 + 
+       Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2] 3^Rational[1, 2]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 + 
+       Rational[-1, 2] 3^Rational[1, 2], 1}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1, Rational[1, 2] 
+       3^Rational[1, 2]}}, {{
+      1 - Cos[Rational[1, 18] Pi], 1, Sin[Rational[2, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[2, 9] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Cos[Rational[1, 18] Pi], 1}, {
+      1 - Cos[Rational[1, 18] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[1, 9] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Cos[Rational[1, 18] Pi], 1, Cos[Rational[2, 9] Pi]}}, {{
+      1 - Cos[Rational[1, 18] Pi], 1, Cos[Rational[2, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[1, 9] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Cos[Rational[1, 18] Pi], 1}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[2, 9] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Cos[Rational[1, 18] Pi], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Cos[Rational[1, 18] Pi], 1, Sin[Rational[2, 9] Pi]}}, {{
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1, Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 + 
+       Rational[-1, 2] 3^Rational[1, 2], 1}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 + 
+       Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2] 3^Rational[1, 2]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1 - Sin[Rational[1, 9] Pi], Sin[
+       Rational[2, 9] Pi]}, {
+      1 + Rational[-1, 2] 3^Rational[1, 2], 1, Rational[1, 2]}}, {{
+      1 - Sin[Rational[2, 9] Pi], 1, Cos[Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[2, 9] Pi], 1}, {
+      1 - Sin[Rational[2, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Sin[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[2, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Rational[
+       1, 2]}, {1 - Sin[Rational[2, 9] Pi], 1, Sin[Rational[1, 9] Pi]}}, {{
+      1 - Sin[Rational[1, 9] Pi], 1, Cos[Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[1, 9] Pi], 1}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Cos[
+       Rational[1, 18] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Cos[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Cos[Rational[1, 18] Pi], Cos[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 + Rational[-1, 2] 3^Rational[1, 2], Sin[
+       Rational[2, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[2, 9] Pi], Rational[
+       1, 2]}, {
+      1 - Sin[Rational[1, 9] Pi], 1 - Sin[Rational[1, 9] Pi], Sin[
+       Rational[1, 9] Pi]}, {
+      1 - Sin[Rational[1, 9] Pi], 1, Sin[Rational[1, 18] Pi]}}, {{1, 1, 1}, {
+      1, 1 - Sin[Rational[1, 9] Pi], Cos[Rational[1, 18] Pi]}, {
+      1, 1 - Sin[Rational[2, 9] Pi], Cos[Rational[1, 9] Pi]}, {
+      1, 1 + Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2] 
+       3^Rational[1, 2]}, {
+      1, 1 - Cos[Rational[1, 18] Pi], Cos[Rational[2, 9] Pi]}, {
+      1, 1 - Cos[Rational[1, 18] Pi], Sin[Rational[2, 9] Pi]}, {
+      1, 1 + Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2]}, {
+      1, 1 - Sin[Rational[2, 9] Pi], Sin[Rational[1, 9] Pi]}, {
+      1, 1 - Sin[Rational[1, 9] Pi], Sin[Rational[1, 18] Pi]}, {1, 1, 
+      0}}}, {{{1, 1, 0}, {1, 0.6579798566743313, 0.17364817766693033`}, {
+      1, 0.35721239031346075`, 0.3420201433256687}, {
+      1, 0.1339745962155614, 0.5}, {
+      1, 0.01519224698779198, 0.6427876096865393}, {
+      1, 0.01519224698779198, 0.766044443118978}, {
+      1, 0.1339745962155614, 0.8660254037844386}, {
+      1, 0.35721239031346075`, 0.9396926207859084}, {
+      1, 0.6579798566743313, 0.984807753012208}, {1, 1, 1}}, {{
+      0.6579798566743313, 1, 0.17364817766693033`}, {0.6579798566743313, 
+      0.6579798566743313, 0.3420201433256687}, {0.6579798566743313, 
+      0.35721239031346075`, 0.5}, {0.6579798566743313, 0.1339745962155614, 
+      0.6427876096865393}, {0.6579798566743313, 0.01519224698779198, 
+      0.766044443118978}, {0.6579798566743313, 0.01519224698779198, 
+      0.8660254037844386}, {0.6579798566743313, 0.1339745962155614, 
+      0.9396926207859084}, {0.6579798566743313, 0.35721239031346075`, 
+      0.984807753012208}, {0.6579798566743313, 0.6579798566743313, 1}, {
+      0.6579798566743313, 1, 0.984807753012208}}, {{
+      0.35721239031346075`, 1, 0.3420201433256687}, {0.35721239031346075`, 
+      0.6579798566743313, 0.5}, {0.35721239031346075`, 0.35721239031346075`, 
+      0.6427876096865393}, {0.35721239031346075`, 0.1339745962155614, 
+      0.766044443118978}, {0.35721239031346075`, 0.01519224698779198, 
+      0.8660254037844386}, {0.35721239031346075`, 0.01519224698779198, 
+      0.9396926207859084}, {0.35721239031346075`, 0.1339745962155614, 
+      0.984807753012208}, {0.35721239031346075`, 0.35721239031346075`, 1}, {
+      0.35721239031346075`, 0.6579798566743313, 0.984807753012208}, {
+      0.35721239031346075`, 1, 0.9396926207859084}}, {{
+      0.1339745962155614, 1, 0.5}, {0.1339745962155614, 0.6579798566743313, 
+      0.6427876096865393}, {0.1339745962155614, 0.35721239031346075`, 
+      0.766044443118978}, {0.1339745962155614, 0.1339745962155614, 
+      0.8660254037844386}, {0.1339745962155614, 0.01519224698779198, 
+      0.9396926207859084}, {0.1339745962155614, 0.01519224698779198, 
+      0.984807753012208}, {0.1339745962155614, 0.1339745962155614, 1}, {
+      0.1339745962155614, 0.35721239031346075`, 0.984807753012208}, {
+      0.1339745962155614, 0.6579798566743313, 0.9396926207859084}, {
+      0.1339745962155614, 1, 0.8660254037844386}}, {{
+      0.01519224698779198, 1, 0.6427876096865393}, {0.01519224698779198, 
+      0.6579798566743313, 0.766044443118978}, {0.01519224698779198, 
+      0.35721239031346075`, 0.8660254037844386}, {0.01519224698779198, 
+      0.1339745962155614, 0.9396926207859084}, {0.01519224698779198, 
+      0.01519224698779198, 0.984807753012208}, {
+      0.01519224698779198, 0.01519224698779198, 1}, {0.01519224698779198, 
+      0.1339745962155614, 0.984807753012208}, {0.01519224698779198, 
+      0.35721239031346075`, 0.9396926207859084}, {0.01519224698779198, 
+      0.6579798566743313, 0.8660254037844386}, {
+      0.01519224698779198, 1, 0.766044443118978}}, {{
+      0.01519224698779198, 1, 0.766044443118978}, {0.01519224698779198, 
+      0.6579798566743313, 0.8660254037844386}, {0.01519224698779198, 
+      0.35721239031346075`, 0.9396926207859084}, {0.01519224698779198, 
+      0.1339745962155614, 0.984807753012208}, {
+      0.01519224698779198, 0.01519224698779198, 1}, {0.01519224698779198, 
+      0.01519224698779198, 0.984807753012208}, {0.01519224698779198, 
+      0.1339745962155614, 0.9396926207859084}, {0.01519224698779198, 
+      0.35721239031346075`, 0.8660254037844386}, {0.01519224698779198, 
+      0.6579798566743313, 0.766044443118978}, {
+      0.01519224698779198, 1, 0.6427876096865393}}, {{
+      0.1339745962155614, 1, 0.8660254037844386}, {0.1339745962155614, 
+      0.6579798566743313, 0.9396926207859084}, {0.1339745962155614, 
+      0.35721239031346075`, 0.984807753012208}, {
+      0.1339745962155614, 0.1339745962155614, 1}, {0.1339745962155614, 
+      0.01519224698779198, 0.984807753012208}, {0.1339745962155614, 
+      0.01519224698779198, 0.9396926207859084}, {0.1339745962155614, 
+      0.1339745962155614, 0.8660254037844386}, {0.1339745962155614, 
+      0.35721239031346075`, 0.766044443118978}, {0.1339745962155614, 
+      0.6579798566743313, 0.6427876096865393}, {
+      0.1339745962155614, 1, 0.5}}, {{
+      0.35721239031346075`, 1, 0.9396926207859084}, {0.35721239031346075`, 
+      0.6579798566743313, 0.984807753012208}, {
+      0.35721239031346075`, 0.35721239031346075`, 1}, {0.35721239031346075`, 
+      0.1339745962155614, 0.984807753012208}, {0.35721239031346075`, 
+      0.01519224698779198, 0.9396926207859084}, {0.35721239031346075`, 
+      0.01519224698779198, 0.8660254037844386}, {0.35721239031346075`, 
+      0.1339745962155614, 0.766044443118978}, {0.35721239031346075`, 
+      0.35721239031346075`, 0.6427876096865393}, {0.35721239031346075`, 
+      0.6579798566743313, 0.5}, {
+      0.35721239031346075`, 1, 0.3420201433256687}}, {{
+      0.6579798566743313, 1, 0.984807753012208}, {
+      0.6579798566743313, 0.6579798566743313, 1}, {0.6579798566743313, 
+      0.35721239031346075`, 0.984807753012208}, {0.6579798566743313, 
+      0.1339745962155614, 0.9396926207859084}, {0.6579798566743313, 
+      0.01519224698779198, 0.8660254037844386}, {0.6579798566743313, 
+      0.01519224698779198, 0.766044443118978}, {0.6579798566743313, 
+      0.1339745962155614, 0.6427876096865393}, {0.6579798566743313, 
+      0.35721239031346075`, 0.5}, {0.6579798566743313, 0.6579798566743313, 
+      0.3420201433256687}, {0.6579798566743313, 1, 0.17364817766693033`}}, {{
+      1, 1, 1}, {1, 0.6579798566743313, 0.984807753012208}, {
+      1, 0.35721239031346075`, 0.9396926207859084}, {
+      1, 0.1339745962155614, 0.8660254037844386}, {
+      1, 0.01519224698779198, 0.766044443118978}, {
+      1, 0.01519224698779198, 0.6427876096865393}, {
+      1, 0.1339745962155614, 0.5}, {
+      1, 0.35721239031346075`, 0.3420201433256687}, {
+      1, 0.6579798566743313, 0.17364817766693033`}, {1, 1, 0}}}]]]], "Output",
+ CellChangeTimes->{{3.6636039461236467`*^9, 3.663603956764592*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+   "]]]], "Output",
+ CellChangeTimes->{{3.6636039461236467`*^9, 3.663603956767576*^9}}]
+}, Open  ]]
+},
+WindowSize->{718, 868},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2656, 60, 372, "Input"],
+Cell[3239, 84, 14747, 253, 374, "Output"],
+Cell[17989, 339, 3311, 55, 374, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
