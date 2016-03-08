@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    102349,       2055]
-NotebookOptionsPosition[    101991,       2038]
-NotebookOutlinePosition[    102336,       2053]
-CellTagsIndexPosition[    102293,       2050]
+NotebookDataLength[    102518,       2058]
+NotebookOptionsPosition[    102158,       2041]
+NotebookOutlinePosition[    102503,       2056]
+CellTagsIndexPosition[    102460,       2053]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -139,26 +139,26 @@ Cell[BoxData[{
      RowBox[{"x", ",", " ", "1", ",", " ", "100", ",", " ", "1"}], "}"}]}], 
    "]"}], "]"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBmIQzcZ/Tmu692vHc0trjUF0T6igFYi+9EwKTB/OO1YN
+1:eJxTTMoPSmViYGAQBWIQzcZ/Tmu692vHc0trjUF0T6igFYi+9EwKTB/OO1YN
 ot8sutkCoq9+XNIJog9cut8L5nPsnQii/zv0TwHRG7u4Z4LojgppMN0fpTkX
 RD9Q510AoiNtD78E0T5yFz+A6E+SR/+DaKclrewzgLRBlKsMiPZ8vgdMTxOe
 oASiZb78UgPRmQEL9EH0n4XzjUC0/715sw8C6YW1y8B0W0rjAhCt8bcDTOf0
 3VgGovuWiK8E0VreVgdA9LuvAYdAtPM7vTNgfdJyt0H0L9k590H0iiPzwfSl
-To1PIPpI/6cfIBoABBCjYQ==
+To1PIPpI/6cfINrgkKFOuc9rR9t+J30QzVTzzhhEyy77BqYBS8uxNg==
   "]],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i12$$ = 25, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i7$$ = 35, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i12$$ = 1}, 
-     "\"max\"" :> {$CellContext`i12$$ = 100}}, Typeset`bookmarkMode$$ = 
-    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"min\"" :> {$CellContext`i7$$ = 1}, 
+     "\"max\"" :> {$CellContext`i7$$ = 100}}, Typeset`bookmarkMode$$ = "Menu",
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i12$$], 1, ""}, 1, 100, 1}}, Typeset`size$$ = 
+       Hold[$CellContext`i7$$], 1, ""}, 1, 100, 1}}, Typeset`size$$ = 
     Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i12$1322$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`i7$1015$$ = 0}, 
     PaneBox[
      PanelBox[
       DynamicWrapperBox[GridBox[{
@@ -168,10 +168,10 @@ Cell[BoxData[
             TagBox[
              StyleBox[GridBox[{
                 {"\<\"\"\>", 
-                 AnimatorBox[Dynamic[$CellContext`i12$$], {1, 100, 1},
+                 AnimatorBox[Dynamic[$CellContext`i7$$], {1, 100, 1},
                   AnimationRate->Automatic,
-                  AnimationRunTime->156.24350261688232`,
-                  AnimationTimeIndex->1.2387259483337516`,
+                  AnimationRunTime->6.758457183837891,
+                  AnimationTimeIndex->1.7468946456909178`,
                   
                   AppearanceElements->{
                    "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons",
@@ -1962,7 +1962,7 @@ Cell[BoxData[
                     LineBox[{{101, 2}, {101, 4.5}}], 
                     LineBox[{{100, 4.3}, {102, 3.3}}], 
                     CircleBox[{101, 5.}, 0.5]}}},
-                 ImageSize->Full]}, Dynamic[$CellContext`i12$$],
+                 ImageSize->Full]}, Dynamic[$CellContext`i7$$],
                 Alignment->Automatic,
                 ImageSize->All,
                 TransitionDirection->Horizontal,
@@ -2010,14 +2010,16 @@ Cell[BoxData[
            CurrentValue["PreviousFormatTime"], 
            CurrentValue["CurrentFormatTime"]]& , {
            
-           Manipulate`Dump`controllerLink[{$CellContext`i12$$, \
-$CellContext`i12$1322$$}, "X1", 
+           Manipulate`Dump`controllerLink[{$CellContext`i7$$, \
+$CellContext`i7$1015$$}, "X1", 
             If["DefaultAbsolute", True, "JB1"], False, {1, 100, 1}, 100, 
             1.]}], 
          CurrentValue[{
           "ControllerData", {
            "Gamepad", "Joystick", "Multi-Axis Controller"}}], {}]],
-       ImageSizeCache->{585., {89.25, 96.25}}],
+       ImageSizeCache->{
+        4.503599627370508*^15, {5.1453402792233675`*^14, 
+         5.1453402792234375`*^14}}],
       DefaultBaseStyle->{},
       FrameMargins->{{5, 5}, {5, 5}}],
      BaselinePosition->Automatic,
@@ -2033,7 +2035,8 @@ $CellContext`i12$1322$$}, "X1",
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
   3.6635972738548813`*^9, 3.6635973104058065`*^9, {3.663597492531968*^9, 
-   3.663597512619299*^9}}]
+   3.663597512619299*^9}, {3.663968630286753*^9, 3.6639686355900345`*^9}, 
+   3.663968672701297*^9}]
 }, Open  ]]
 },
 WindowSize->{718, 868},
@@ -2054,8 +2057,8 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 325, 7, 181, "Text"],
 Cell[CellGroupData[{
-Cell[908, 31, 4361, 116, 332, "Input"],
-Cell[5272, 149, 96703, 1886, 222, "Output"]
+Cell[908, 31, 4393, 116, 332, "Input"],
+Cell[5304, 149, 96838, 1889, 32797, "Output"]
 }, Open  ]]
 }
 ]
