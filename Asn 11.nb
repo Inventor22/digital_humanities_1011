@@ -10,16 +10,24 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21678,        414]
-NotebookOptionsPosition[     21316,        397]
-NotebookOutlinePosition[     21661,        412]
-CellTagsIndexPosition[     21618,        409]
+NotebookDataLength[     21997,        423]
+NotebookOptionsPosition[     21599,        405]
+NotebookOutlinePosition[     21944,        420]
+CellTagsIndexPosition[     21901,        417]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[TextData[{
+ StyleBox["Digital Humanities 1011 - Assignment 11", "Chapter"],
+ "\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-02-10\nEmail: \
+ddobran@uwo.ca", "Subsubsection"]
+}], "Text",
+ CellChangeTimes->{{3.6641162234381514`*^9, 3.6641162339230194`*^9}}],
 
 Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
   RowBox[{"Raster", "[", "\[IndentingNewLine]", 
@@ -411,10 +419,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 280, 6, 181, "Text"],
 Cell[CellGroupData[{
-Cell[580, 22, 2656, 60, 372, "Input"],
-Cell[3239, 84, 14747, 253, 374, "Output"],
-Cell[17989, 339, 3311, 55, 374, "Output"]
+Cell[863, 30, 2656, 60, 372, "Input"],
+Cell[3522, 92, 14747, 253, 374, "Output"],
+Cell[18272, 347, 3311, 55, 374, "Output"]
 }, Open  ]]
 }
 ]

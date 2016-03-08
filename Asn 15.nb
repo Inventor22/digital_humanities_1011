@@ -1,0 +1,2380 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    113951,       2371]
+NotebookOptionsPosition[    113592,       2354]
+NotebookOutlinePosition[    113937,       2369]
+CellTagsIndexPosition[    113894,       2366]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Digital Humanities 1011 - Assignment 10", "Chapter"],
+ "\n",
+ StyleBox["Name: Dustin Dobransky\nId: 250575030\nDate: 2016-02-08\nEmail: \
+ddobran@uwo.ca", "Subsubsection"]
+}], "Text",
+ CellChangeTimes->{{3.663511976787507*^9, 3.663512013143669*^9}, {
+  3.663597585377994*^9, 3.663597602992509*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"drawPerson", "[", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", " ", "y_", ",", " ", "step_"}], "}"}], "]"}], " ", ":=",
+    " ", 
+   RowBox[{"{", 
+    RowBox[{"Black", ",", " ", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "step"}], ",", " ", "y"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "1"}], ",", " ", 
+          RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "2", "-", "step"}], ",", " ", "y"}], "}"}]}], 
+       "}"}], "]"}], ",", " ", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "1"}], ",", " ", 
+          RowBox[{"y", "+", "2"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "1"}], ",", " ", 
+          RowBox[{"y", "+", "4.5"}]}], "}"}]}], "}"}], "]"}], ",", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"y", "+", "3.8", "+", ".5", "-", "step"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "2"}], ",", 
+          RowBox[{"y", "-", ".5", "+", "3.8", "+", "step"}]}], "}"}]}], "}"}],
+       "]"}], ",", " ", "\[IndentingNewLine]", 
+     RowBox[{"Circle", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", "1"}], ",", " ", 
+         RowBox[{"y", "+", "4.5", "+", ".5"}]}], "}"}], ",", " ", ".5"}], 
+      "]"}]}], "}"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ListAnimate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{"LightGreen", ",", 
+           RowBox[{"Rectangle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"101", ",", " ", "20"}], "}"}]}], "]"}], ",", "Black", 
+           ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Mod", "[", 
+               RowBox[{"x", ",", " ", "30"}], "]"}], " ", "<", " ", "15"}], 
+             ",", 
+             RowBox[{"drawPerson", "[", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", " ", "0", ",", " ", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{"2", "*", "Pi", "*", 
+                    RowBox[{"x", "/", "10"}]}], "]"}]}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"Mod", "[", 
+                   RowBox[{"x", ",", " ", "10"}], "]"}], "/", "10"}]}]}], 
+               "}"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"drawPerson", "[", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", " ", 
+                RowBox[{"10", "*", 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"x", ",", "30"}], "]"}], "-", "15"}], ")"}], "*", 
+                   RowBox[{"Pi", "/", "15"}]}], "]"}]}], ",", " ", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{"2", "*", "Pi", "*", 
+                    RowBox[{"x", "/", "10"}]}], "]"}]}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"Mod", "[", 
+                   RowBox[{"x", ",", " ", "10"}], "]"}], "/", "10"}]}]}], 
+               "}"}], "]"}]}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+         "\[IndentingNewLine]", ",", " ", 
+         RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}], ","}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"EmitSound", "[", 
+        RowBox[{"Sound", "[", 
+         RowBox[{"SoundNote", "[", 
+          RowBox[{"\"\<C\>\"", ",", " ", 
+           RowBox[{"1", "/", "16"}]}], "]"}], "]"}], "]"}], "*)"}], 
+      "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "1", ",", " ", "100", ",", " ", "1"}], "}"}]}], 
+    " ", "]"}], ",", " ", "\[IndentingNewLine]", "16"}], "]"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQBGIQzcZ/Tmu692vHc0trjUF0T6igFYi+9EwKTB/OO1YN
+ot8sutkCoq9+XNIJog9cut8L5nPsnQii/zv0TwHRG7u4Z4LojgppMN0fpTkX
+RD9Q510AoiNtD78E0T5yFz+A6E+SR/+DaKclrewzgLRBlKsMiPZ8vgdMTxOe
+oASiZb78UgPRmQEL9EH0n4XzjUC0/715sw8C6YW1y8B0W0rjAhCt8bcDTOf0
+3VgGovuWiK8E0VreVgdA9LuvAYdAtPM7vTNgfdJyt0H0L9k590H0iiPzwfSl
+To1PIPpI/6cfINrgkKFOuc9rR9t+J30QzVTzzhhEyy77Bqb3beA/qBf42rFw
++1MwrXf79ikQ3XLq3k0Q/ccz9i+Itgo8wqoPpI22zuMC0Ts+3xUA0QDhFNFu
+
+  "]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i11$$ = 60, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {
+    "\"min\"" :> {$CellContext`i11$$ = 1}, 
+     "\"max\"" :> {$CellContext`i11$$ = 100}}, Typeset`bookmarkMode$$ = 
+    "Menu", Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`i11$$], 1, ""}, 1, 100, 1}}, Typeset`size$$ = 
+    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i11$7576$$ = 0}, 
+    PaneBox[
+     PanelBox[
+      DynamicWrapperBox[GridBox[{
+         {
+          ItemBox[
+           ItemBox[
+            TagBox[
+             StyleBox[GridBox[{
+                {"\<\"\"\>", 
+                 AnimatorBox[Dynamic[$CellContext`i11$$], {1, 100, 1},
+                  AnimationRate->16,
+                  AnimationRunTime->16.167500495910645`,
+                  AnimationTimeIndex->3.68489408493042,
+                  
+                  AppearanceElements->{
+                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons",
+                     "DirectionButton"},
+                  AutoAction->False,
+                  DisplayAllSteps->True]}
+               },
+               AutoDelete->False,
+               
+               GridBoxAlignment->{
+                "Columns" -> {Right, {Left}}, "ColumnsIndexed" -> {}, 
+                 "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+               
+               GridBoxItemSize->{
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              "ListAnimateLabel",
+              StripOnInput->False],
+             {"ControlArea", Top}],
+            Alignment->{Automatic, Inherited},
+            StripOnInput->False],
+           Background->None,
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            StyleBox[
+             PaneBox[
+              TagBox[
+               PaneSelectorBox[{1->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    1 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {2, 2}, {
+                    3 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    1.0190983005625052`, 0}, {2, 2}, {
+                    2.980901699437495, 0}}]], LineBox[{{2, 2}, {2, 4.5}}], 
+                    LineBox[{{1, 4.280901699437495}, {3, 3.319098300562505}}],
+                     CircleBox[{2, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 2->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    2 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {3, 2}, {
+                    4 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    2.1381966011250104`, 0}, {3, 2}, {
+                    3.8618033988749896`, 0}}]], LineBox[{{3, 2}, {3, 4.5}}], 
+                    LineBox[{{2, 4.161803398874989}, {
+                    4, 3.4381966011250102`}}], CircleBox[{3, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 3->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    3 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {4, 2}, {
+                    5 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    3.3927050983124842`, 0}, {4, 2}, {
+                    4.607294901687515, 0}}]], LineBox[{{4, 2}, {4, 4.5}}], 
+                    LineBox[{{3, 3.9072949016875156`}, {
+                    5, 3.692705098312484}}], CircleBox[{4, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 4->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    4 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {5, 2}, {
+                    6 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    4.723606797749979, 0}, {5, 2}, {5.276393202250021, 0}}]], 
+                    LineBox[{{5, 2}, {5, 4.5}}], 
+                    LineBox[{{4, 3.5763932022500207`}, {
+                    6, 4.023606797749979}}], CircleBox[{5, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 5->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{6, 0}, {6, 2}, {6, 0}}], 
+                    LineBox[{{6, 2}, {6, 4.5}}], 
+                    LineBox[{{5, 3.3}, {7, 4.3}}], CircleBox[{6, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 6->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    6 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {7, 2}, {
+                    8 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    7.085410196624968, 0}, {7, 2}, {6.914589803375032, 0}}]], 
+                    LineBox[{{7, 2}, {7, 4.5}}], 
+                    LineBox[{{6, 3.2145898033750315`}, {
+                    8, 4.385410196624968}}], CircleBox[{7, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 7->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    7 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {8, 2}, {
+                    9 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    7.916311896062463, 0}, {8, 2}, {8.083688103937536, 0}}]], 
+                    LineBox[{{8, 2}, {8, 4.5}}], 
+                    LineBox[{{7, 3.3836881039375366`}, {
+                    9, 4.216311896062463}}], CircleBox[{8, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 8->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    8 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {9, 2}, {
+                    10 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}}, {{
+                    8.552786404500042, 0}, {9, 2}, {9.447213595499958, 0}}]], 
+                    LineBox[{{9, 2}, {9, 4.5}}], 
+                    LineBox[{{8, 3.7472135954999577`}, {
+                    10, 3.852786404500042}}], CircleBox[{9, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 9->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    9 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {10, 2}, {
+                    11 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}}, {{
+                    9.171884705062547, 0}, {10, 2}, {
+                    10.828115294937453`, 0}}]], LineBox[{{10, 2}, {10, 4.5}}],
+                     LineBox[{{9, 4.128115294937452}, {
+                    11, 3.471884705062547}}], CircleBox[{10, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 10->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{10, 0}, {11, 2}, {12, 0}}], 
+                    LineBox[{{11, 2}, {11, 4.5}}], 
+                    LineBox[{{10, 4.3}, {12, 3.3}}], 
+                    CircleBox[{11, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 11->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    11 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {12, 2}, {
+                    13 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    11.019098300562506`, 0}, {12, 2}, {
+                    12.980901699437494`, 0}}]], LineBox[{{12, 2}, {12, 4.5}}],
+                     LineBox[{{11, 4.280901699437495}, {
+                    13, 3.319098300562505}}], CircleBox[{12, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 12->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    12 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {13, 2}, {
+                    14 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    12.13819660112501, 0}, {13, 2}, {13.86180339887499, 0}}]],
+                     LineBox[{{13, 2}, {13, 4.5}}], 
+                    LineBox[{{12, 4.161803398874989}, {
+                    14, 3.4381966011250102`}}], CircleBox[{13, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 13->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    13 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {14, 2}, {
+                    15 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    13.392705098312485`, 0}, {14, 2}, {
+                    14.607294901687515`, 0}}]], LineBox[{{14, 2}, {14, 4.5}}],
+                     LineBox[{{13, 3.9072949016875156`}, {
+                    15, 3.692705098312484}}], CircleBox[{14, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 14->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    14 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {15, 2}, {
+                    16 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    14.723606797749978`, 0}, {15, 2}, {
+                    15.276393202250022`, 0}}]], LineBox[{{15, 2}, {15, 4.5}}],
+                     LineBox[{{14, 3.5763932022500207`}, {
+                    16, 4.023606797749979}}], CircleBox[{15, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 15->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{16, 0}, {16, 2}, {16, 0}}], 
+                    LineBox[{{16, 2}, {16, 4.5}}], 
+                    LineBox[{{15, 3.3}, {17, 4.3}}], 
+                    CircleBox[{16, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 16->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    16 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    17, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    18 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{17.08541019662497, 
+                    2.079116908177593}, {17, 4.079116908177593}, {
+                    16.91458980337503, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{17, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    17, 6.579116908177593}}, {{17, 4.079116908177593}, {
+                    17, 6.579116908177593}}]], 
+                    LineBox[{{16, 5.293706711552625}, {
+                    18, 6.464527104802562}}], 
+                    CircleBox[{17, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 17->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    17 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    18, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    19 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{17.916311896062464`, 
+                    4.0673664307580015`}, {18, 6.0673664307580015`}, {
+                    18.083688103937536`, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{18, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    18, 8.567366430758002}}, {{18, 6.0673664307580015`}, {
+                    18, 8.567366430758002}}]], 
+                    LineBox[{{17, 7.451054534695539}, {
+                    19, 8.283678326820464}}], 
+                    CircleBox[{18, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 18->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    18 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    19, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    20 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{18.552786404500043`, 
+                    5.877852522924732}, {19, 7.877852522924732}, {
+                    19.447213595499957`, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    19, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    19, 10.377852522924732`}}, {{19, 7.877852522924732}, {
+                    19, 10.377852522924732`}}]], 
+                    LineBox[{{18, 9.625066118424689}, {
+                    20, 9.730638927424772}}], 
+                    CircleBox[{19, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 19->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    19 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    20, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    21 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{19.171884705062546`, 
+                    7.431448254773942}, {20, 9.431448254773942}, {
+                    20.828115294937454`, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{20, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    20, 11.931448254773942`}}, {{20, 9.431448254773942}, {
+                    20, 11.931448254773942`}}]], 
+                    LineBox[{{19, 11.559563549711395`}, {
+                    21, 10.90333295983649}}], 
+                    CircleBox[{20, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 20->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{20, 5 3^Rational[1, 2]}, {
+                    21, 2 + 5 3^Rational[1, 2]}, {22, 5 3^Rational[1, 2]}}, {{
+                    20, 8.660254037844386}, {21, 10.660254037844386`}, {
+                    22, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{21, 2 + 5 3^Rational[1, 2]}, {
+                    21, 13.160254037844386`}}, {{21, 10.660254037844386`}, {
+                    21, 13.160254037844386`}}]], 
+                    LineBox[{{20, 12.960254037844386`}, {
+                    22, 11.960254037844386`}}], 
+                    CircleBox[{21, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 21->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    21 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    22, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    23 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{21.019098300562504`, 
+                    9.510565162951535}, {22, 11.510565162951535`}, {
+                    22.980901699437496`, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    22, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    22, 14.010565162951535`}}, {{22, 11.510565162951535`}, {
+                    22, 14.010565162951535`}}]], 
+                    LineBox[{{21, 13.791466862389028`}, {
+                    23, 12.82966346351404}}], 
+                    CircleBox[{22, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 22->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    22 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    23, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    24 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{22.13819660112501, 
+                    9.945218953682733}, {23, 11.945218953682733`}, {
+                    23.86180339887499, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{23, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    23, 14.445218953682733`}}, {{23, 11.945218953682733`}, {
+                    23, 14.445218953682733`}}]], 
+                    LineBox[{{22, 14.107022352557722`}, {
+                    24, 13.383415554807744`}}], 
+                    CircleBox[{23, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 23->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    23 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    24, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    25 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{23.392705098312483`, 
+                    9.945218953682733}, {24, 11.945218953682733`}, {
+                    24.607294901687517`, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{24, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    24, 14.445218953682733`}}, {{24, 11.945218953682733`}, {
+                    24, 14.445218953682733`}}]], 
+                    LineBox[{{23, 13.85251385537025}, {
+                    25, 13.637924051995217`}}], 
+                    CircleBox[{24, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 24->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    24 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    25, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    26 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{24.72360679774998, 
+                    9.510565162951535}, {25, 11.510565162951535`}, {
+                    25.27639320225002, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    25, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    25, 14.010565162951535`}}, {{25, 11.510565162951535`}, {
+                    25, 14.010565162951535`}}]], 
+                    LineBox[{{24, 13.086958365201555`}, {
+                    26, 13.534171960701512`}}], 
+                    CircleBox[{25, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 25->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{26, 5 3^Rational[1, 2]}, {
+                    26, 2 + 5 3^Rational[1, 2]}, {26, 5 3^Rational[1, 2]}}, {{
+                    26, 8.660254037844386}, {26, 10.660254037844386`}, {
+                    26, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{26, 2 + 5 3^Rational[1, 2]}, {
+                    26, 13.160254037844386`}}, {{26, 10.660254037844386`}, {
+                    26, 13.160254037844386`}}]], 
+                    LineBox[{{25, 11.960254037844386`}, {
+                    27, 12.960254037844386`}}], 
+                    CircleBox[{26, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 26->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    26 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    27, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    28 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{27.08541019662497, 
+                    7.431448254773942}, {27, 9.431448254773942}, {
+                    26.91458980337503, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{27, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    27, 11.931448254773942`}}, {{27, 9.431448254773942}, {
+                    27, 11.931448254773942`}}]], 
+                    LineBox[{{26, 10.646038058148974`}, {
+                    28, 11.816858451398911`}}], 
+                    CircleBox[{27, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 27->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    27 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    28, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    29 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{27.916311896062464`, 
+                    5.877852522924732}, {28, 7.877852522924732}, {
+                    28.083688103937536`, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    28, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    28, 10.377852522924732`}}, {{28, 7.877852522924732}, {
+                    28, 10.377852522924732`}}]], 
+                    LineBox[{{27, 9.261540626862267}, {
+                    29, 10.094164418987194`}}], 
+                    CircleBox[{28, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 28->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    28 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    29, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    30 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{28.552786404500043`, 
+                    4.0673664307580015`}, {29, 6.0673664307580015`}, {
+                    29.447213595499957`, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{29, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    29, 8.567366430758002}}, {{29, 6.0673664307580015`}, {
+                    29, 8.567366430758002}}]], 
+                    LineBox[{{28, 7.814580026257959}, {
+                    30, 7.920152835258044}}], 
+                    CircleBox[{29, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 29->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    29 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    30, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    31 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{29.171884705062546`, 
+                    2.079116908177593}, {30, 4.079116908177593}, {
+                    30.828115294937454`, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{30, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    30, 6.579116908177593}}, {{30, 4.079116908177593}, {
+                    30, 6.579116908177593}}]], 
+                    LineBox[{{29, 6.207232203115046}, {
+                    31, 5.551001613240141}}], 
+                    CircleBox[{30, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 30->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{30, 0}, {31, 2}, {32, 0}}], 
+                    LineBox[{{31, 2}, {31, 4.5}}], 
+                    LineBox[{{30, 4.3}, {32, 3.3}}], 
+                    CircleBox[{31, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 31->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    31 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {32, 2}, {
+                    33 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    31.019098300562504`, 0}, {32, 2}, {
+                    32.980901699437496`, 0}}]], LineBox[{{32, 2}, {32, 4.5}}],
+                     LineBox[{{31, 4.280901699437495}, {
+                    33, 3.319098300562505}}], CircleBox[{32, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 32->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    32 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {33, 2}, {
+                    34 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    32.13819660112501, 0}, {33, 2}, {33.86180339887499, 0}}]],
+                     LineBox[{{33, 2}, {33, 4.5}}], 
+                    LineBox[{{32, 4.161803398874989}, {
+                    34, 3.4381966011250102`}}], CircleBox[{33, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 33->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    33 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {34, 2}, {
+                    35 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    33.39270509831248, 0}, {34, 2}, {34.60729490168752, 0}}]],
+                     LineBox[{{34, 2}, {34, 4.5}}], 
+                    LineBox[{{33, 3.9072949016875156`}, {
+                    35, 3.692705098312484}}], CircleBox[{34, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 34->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    34 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {35, 2}, {
+                    36 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    34.72360679774998, 0}, {35, 2}, {35.27639320225002, 0}}]],
+                     LineBox[{{35, 2}, {35, 4.5}}], 
+                    LineBox[{{34, 3.5763932022500207`}, {
+                    36, 4.023606797749979}}], CircleBox[{35, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 35->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{36, 0}, {36, 2}, {36, 0}}], 
+                    LineBox[{{36, 2}, {36, 4.5}}], 
+                    LineBox[{{35, 3.3}, {37, 4.3}}], 
+                    CircleBox[{36, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 36->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    36 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {37, 2}, {
+                    38 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    37.08541019662497, 0}, {37, 2}, {36.91458980337503, 0}}]],
+                     LineBox[{{37, 2}, {37, 4.5}}], 
+                    LineBox[{{36, 3.2145898033750315`}, {
+                    38, 4.385410196624968}}], CircleBox[{37, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 37->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    37 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {38, 2}, {
+                    39 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    37.91631189606246, 0}, {38, 2}, {38.08368810393754, 0}}]],
+                     LineBox[{{38, 2}, {38, 4.5}}], 
+                    LineBox[{{37, 3.3836881039375366`}, {
+                    39, 4.216311896062463}}], CircleBox[{38, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 38->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    38 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {39, 2}, {
+                    40 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}}, {{
+                    38.55278640450004, 0}, {39, 2}, {39.44721359549996, 0}}]],
+                     LineBox[{{39, 2}, {39, 4.5}}], 
+                    LineBox[{{38, 3.7472135954999577`}, {
+                    40, 3.852786404500042}}], CircleBox[{39, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 39->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    39 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {40, 2}, {
+                    41 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}}, {{
+                    39.171884705062546`, 0}, {40, 2}, {
+                    40.828115294937454`, 0}}]], LineBox[{{40, 2}, {40, 4.5}}],
+                     LineBox[{{39, 4.128115294937452}, {
+                    41, 3.471884705062547}}], CircleBox[{40, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 40->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{40, 0}, {41, 2}, {42, 0}}], 
+                    LineBox[{{41, 2}, {41, 4.5}}], 
+                    LineBox[{{40, 4.3}, {42, 3.3}}], 
+                    CircleBox[{41, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 41->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    41 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {42, 2}, {
+                    43 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    41.019098300562504`, 0}, {42, 2}, {
+                    42.980901699437496`, 0}}]], LineBox[{{42, 2}, {42, 4.5}}],
+                     LineBox[{{41, 4.280901699437495}, {
+                    43, 3.319098300562505}}], CircleBox[{42, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 42->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    42 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {43, 2}, {
+                    44 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    42.13819660112501, 0}, {43, 2}, {43.86180339887499, 0}}]],
+                     LineBox[{{43, 2}, {43, 4.5}}], 
+                    LineBox[{{42, 4.161803398874989}, {
+                    44, 3.4381966011250102`}}], CircleBox[{43, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 43->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    43 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {44, 2}, {
+                    45 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    43.39270509831248, 0}, {44, 2}, {44.60729490168752, 0}}]],
+                     LineBox[{{44, 2}, {44, 4.5}}], 
+                    LineBox[{{43, 3.9072949016875156`}, {
+                    45, 3.692705098312484}}], CircleBox[{44, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 44->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    44 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {45, 2}, {
+                    46 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    44.72360679774998, 0}, {45, 2}, {45.27639320225002, 0}}]],
+                     LineBox[{{45, 2}, {45, 4.5}}], 
+                    LineBox[{{44, 3.5763932022500207`}, {
+                    46, 4.023606797749979}}], CircleBox[{45, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 45->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{46, 0}, {46, 2}, {46, 0}}], 
+                    LineBox[{{46, 2}, {46, 4.5}}], 
+                    LineBox[{{45, 3.3}, {47, 4.3}}], 
+                    CircleBox[{46, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 46->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    46 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    47, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    48 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{47.08541019662497, 
+                    2.079116908177593}, {47, 4.079116908177593}, {
+                    46.91458980337503, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{47, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    47, 6.579116908177593}}, {{47, 4.079116908177593}, {
+                    47, 6.579116908177593}}]], 
+                    LineBox[{{46, 5.293706711552625}, {
+                    48, 6.464527104802562}}], 
+                    CircleBox[{47, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 47->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    47 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    48, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    49 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{47.91631189606246, 
+                    4.0673664307580015`}, {48, 6.0673664307580015`}, {
+                    48.08368810393754, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{48, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    48, 8.567366430758002}}, {{48, 6.0673664307580015`}, {
+                    48, 8.567366430758002}}]], 
+                    LineBox[{{47, 7.451054534695539}, {
+                    49, 8.283678326820464}}], 
+                    CircleBox[{48, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 48->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    48 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    49, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    50 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{48.55278640450004, 
+                    5.877852522924732}, {49, 7.877852522924732}, {
+                    49.44721359549996, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    49, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    49, 10.377852522924732`}}, {{49, 7.877852522924732}, {
+                    49, 10.377852522924732`}}]], 
+                    LineBox[{{48, 9.625066118424689}, {
+                    50, 9.730638927424772}}], 
+                    CircleBox[{49, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 49->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    49 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    50, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    51 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{49.171884705062546`, 
+                    7.431448254773942}, {50, 9.431448254773942}, {
+                    50.828115294937454`, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{50, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    50, 11.931448254773942`}}, {{50, 9.431448254773942}, {
+                    50, 11.931448254773942`}}]], 
+                    LineBox[{{49, 11.559563549711395`}, {
+                    51, 10.90333295983649}}], 
+                    CircleBox[{50, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 50->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{50, 5 3^Rational[1, 2]}, {
+                    51, 2 + 5 3^Rational[1, 2]}, {52, 5 3^Rational[1, 2]}}, {{
+                    50, 8.660254037844386}, {51, 10.660254037844386`}, {
+                    52, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{51, 2 + 5 3^Rational[1, 2]}, {
+                    51, 13.160254037844386`}}, {{51, 10.660254037844386`}, {
+                    51, 13.160254037844386`}}]], 
+                    LineBox[{{50, 12.960254037844386`}, {
+                    52, 11.960254037844386`}}], 
+                    CircleBox[{51, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 51->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    51 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    52, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    53 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{51.019098300562504`, 
+                    9.510565162951535}, {52, 11.510565162951535`}, {
+                    52.980901699437496`, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    52, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    52, 14.010565162951535`}}, {{52, 11.510565162951535`}, {
+                    52, 14.010565162951535`}}]], 
+                    LineBox[{{51, 13.791466862389028`}, {
+                    53, 12.82966346351404}}], 
+                    CircleBox[{52, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 52->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    52 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    53, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    54 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{52.13819660112501, 
+                    9.945218953682733}, {53, 11.945218953682733`}, {
+                    53.86180339887499, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{53, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    53, 14.445218953682733`}}, {{53, 11.945218953682733`}, {
+                    53, 14.445218953682733`}}]], 
+                    LineBox[{{52, 14.107022352557722`}, {
+                    54, 13.383415554807744`}}], 
+                    CircleBox[{53, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 53->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    53 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    54, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    55 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{53.39270509831248, 
+                    9.945218953682733}, {54, 11.945218953682733`}, {
+                    54.60729490168752, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{54, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    54, 14.445218953682733`}}, {{54, 11.945218953682733`}, {
+                    54, 14.445218953682733`}}]], 
+                    LineBox[{{53, 13.85251385537025}, {
+                    55, 13.637924051995217`}}], 
+                    CircleBox[{54, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 54->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    54 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    55, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    56 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{54.72360679774998, 
+                    9.510565162951535}, {55, 11.510565162951535`}, {
+                    55.27639320225002, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    55, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    55, 14.010565162951535`}}, {{55, 11.510565162951535`}, {
+                    55, 14.010565162951535`}}]], 
+                    LineBox[{{54, 13.086958365201555`}, {
+                    56, 13.534171960701512`}}], 
+                    CircleBox[{55, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 55->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{56, 5 3^Rational[1, 2]}, {
+                    56, 2 + 5 3^Rational[1, 2]}, {56, 5 3^Rational[1, 2]}}, {{
+                    56, 8.660254037844386}, {56, 10.660254037844386`}, {
+                    56, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{56, 2 + 5 3^Rational[1, 2]}, {
+                    56, 13.160254037844386`}}, {{56, 10.660254037844386`}, {
+                    56, 13.160254037844386`}}]], 
+                    LineBox[{{55, 11.960254037844386`}, {
+                    57, 12.960254037844386`}}], 
+                    CircleBox[{56, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 56->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    56 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    57, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    58 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{57.08541019662497, 
+                    7.431448254773942}, {57, 9.431448254773942}, {
+                    56.91458980337503, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{57, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    57, 11.931448254773942`}}, {{57, 9.431448254773942}, {
+                    57, 11.931448254773942`}}]], 
+                    LineBox[{{56, 10.646038058148974`}, {
+                    58, 11.816858451398911`}}], 
+                    CircleBox[{57, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 57->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    57 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    58, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    59 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{57.91631189606246, 
+                    5.877852522924732}, {58, 7.877852522924732}, {
+                    58.08368810393754, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    58, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    58, 10.377852522924732`}}, {{58, 7.877852522924732}, {
+                    58, 10.377852522924732`}}]], 
+                    LineBox[{{57, 9.261540626862267}, {
+                    59, 10.094164418987194`}}], 
+                    CircleBox[{58, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 58->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    58 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    59, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    60 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{58.55278640450004, 
+                    4.0673664307580015`}, {59, 6.0673664307580015`}, {
+                    59.44721359549996, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{59, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    59, 8.567366430758002}}, {{59, 6.0673664307580015`}, {
+                    59, 8.567366430758002}}]], 
+                    LineBox[{{58, 7.814580026257959}, {
+                    60, 7.920152835258044}}], 
+                    CircleBox[{59, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 59->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    59 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    60, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    61 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{59.171884705062546`, 
+                    2.079116908177593}, {60, 4.079116908177593}, {
+                    60.828115294937454`, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{60, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    60, 6.579116908177593}}, {{60, 4.079116908177593}, {
+                    60, 6.579116908177593}}]], 
+                    LineBox[{{59, 6.207232203115046}, {
+                    61, 5.551001613240141}}], 
+                    CircleBox[{60, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 60->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{60, 0}, {61, 2}, {62, 0}}], 
+                    LineBox[{{61, 2}, {61, 4.5}}], 
+                    LineBox[{{60, 4.3}, {62, 3.3}}], 
+                    CircleBox[{61, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 61->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    61 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {62, 2}, {
+                    63 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    61.019098300562504`, 0}, {62, 2}, {
+                    62.980901699437496`, 0}}]], LineBox[{{62, 2}, {62, 4.5}}],
+                     LineBox[{{61, 4.280901699437495}, {
+                    63, 3.319098300562505}}], CircleBox[{62, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 62->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    62 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {63, 2}, {
+                    64 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    62.13819660112501, 0}, {63, 2}, {63.86180339887499, 0}}]],
+                     LineBox[{{63, 2}, {63, 4.5}}], 
+                    LineBox[{{62, 4.161803398874989}, {
+                    64, 3.4381966011250102`}}], CircleBox[{63, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 63->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    63 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {64, 2}, {
+                    65 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    63.39270509831248, 0}, {64, 2}, {64.60729490168751, 0}}]],
+                     LineBox[{{64, 2}, {64, 4.5}}], 
+                    LineBox[{{63, 3.9072949016875156`}, {
+                    65, 3.692705098312484}}], CircleBox[{64, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 64->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    64 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {65, 2}, {
+                    66 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    64.72360679774998, 0}, {65, 2}, {65.27639320225002, 0}}]],
+                     LineBox[{{65, 2}, {65, 4.5}}], 
+                    LineBox[{{64, 3.5763932022500207`}, {
+                    66, 4.023606797749979}}], CircleBox[{65, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 65->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{66, 0}, {66, 2}, {66, 0}}], 
+                    LineBox[{{66, 2}, {66, 4.5}}], 
+                    LineBox[{{65, 3.3}, {67, 4.3}}], 
+                    CircleBox[{66, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 66->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    66 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {67, 2}, {
+                    68 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    67.08541019662496, 0}, {67, 2}, {66.91458980337504, 0}}]],
+                     LineBox[{{67, 2}, {67, 4.5}}], 
+                    LineBox[{{66, 3.2145898033750315`}, {
+                    68, 4.385410196624968}}], CircleBox[{67, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 67->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    67 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {68, 2}, {
+                    69 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    67.91631189606247, 0}, {68, 2}, {68.08368810393753, 0}}]],
+                     LineBox[{{68, 2}, {68, 4.5}}], 
+                    LineBox[{{67, 3.3836881039375366`}, {
+                    69, 4.216311896062463}}], CircleBox[{68, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 68->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    68 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {69, 2}, {
+                    70 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}}, {{
+                    68.55278640450004, 0}, {69, 2}, {69.44721359549996, 0}}]],
+                     LineBox[{{69, 2}, {69, 4.5}}], 
+                    LineBox[{{68, 3.7472135954999577`}, {
+                    70, 3.852786404500042}}], CircleBox[{69, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 69->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    69 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {70, 2}, {
+                    71 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}}, {{
+                    69.17188470506255, 0}, {70, 2}, {70.82811529493745, 0}}]],
+                     LineBox[{{70, 2}, {70, 4.5}}], 
+                    LineBox[{{69, 4.128115294937452}, {
+                    71, 3.471884705062547}}], CircleBox[{70, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 70->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{70, 0}, {71, 2}, {72, 0}}], 
+                    LineBox[{{71, 2}, {71, 4.5}}], 
+                    LineBox[{{70, 4.3}, {72, 3.3}}], 
+                    CircleBox[{71, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 71->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    71 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {72, 2}, {
+                    73 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    71.0190983005625, 0}, {72, 2}, {72.9809016994375, 0}}]], 
+                    LineBox[{{72, 2}, {72, 4.5}}], 
+                    LineBox[{{71, 4.280901699437495}, {
+                    73, 3.319098300562505}}], CircleBox[{72, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 72->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    72 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {73, 2}, {
+                    74 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    72.13819660112502, 0}, {73, 2}, {73.86180339887498, 0}}]],
+                     LineBox[{{73, 2}, {73, 4.5}}], 
+                    LineBox[{{72, 4.161803398874989}, {
+                    74, 3.4381966011250102`}}], CircleBox[{73, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 73->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    73 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {74, 2}, {
+                    75 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    73.39270509831249, 0}, {74, 2}, {74.60729490168751, 0}}]],
+                     LineBox[{{74, 2}, {74, 4.5}}], 
+                    LineBox[{{73, 3.9072949016875156`}, {
+                    75, 3.692705098312484}}], CircleBox[{74, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 74->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    74 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {75, 2}, {
+                    76 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    74.72360679774998, 0}, {75, 2}, {75.27639320225002, 0}}]],
+                     LineBox[{{75, 2}, {75, 4.5}}], 
+                    LineBox[{{74, 3.5763932022500207`}, {
+                    76, 4.023606797749979}}], CircleBox[{75, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 75->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{76, 0}, {76, 2}, {76, 0}}], 
+                    LineBox[{{76, 2}, {76, 4.5}}], 
+                    LineBox[{{75, 3.3}, {77, 4.3}}], 
+                    CircleBox[{76, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 76->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    76 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    77, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    78 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{77.08541019662496, 
+                    2.079116908177593}, {77, 4.079116908177593}, {
+                    76.91458980337504, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{77, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    77, 6.579116908177593}}, {{77, 4.079116908177593}, {
+                    77, 6.579116908177593}}]], 
+                    LineBox[{{76, 5.293706711552625}, {
+                    78, 6.464527104802562}}], 
+                    CircleBox[{77, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 77->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    77 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    78, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    79 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{77.91631189606247, 
+                    4.0673664307580015`}, {78, 6.0673664307580015`}, {
+                    78.08368810393753, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{78, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    78, 8.567366430758002}}, {{78, 6.0673664307580015`}, {
+                    78, 8.567366430758002}}]], 
+                    LineBox[{{77, 7.451054534695539}, {
+                    79, 8.283678326820464}}], 
+                    CircleBox[{78, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 78->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    78 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    79, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    80 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{78.55278640450004, 
+                    5.877852522924732}, {79, 7.877852522924732}, {
+                    79.44721359549996, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    79, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    79, 10.377852522924732`}}, {{79, 7.877852522924732}, {
+                    79, 10.377852522924732`}}]], 
+                    LineBox[{{78, 9.625066118424689}, {
+                    80, 9.730638927424772}}], 
+                    CircleBox[{79, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 79->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    79 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    80, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    81 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{79.17188470506255, 
+                    7.431448254773942}, {80, 9.431448254773942}, {
+                    80.82811529493745, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{80, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    80, 11.931448254773942`}}, {{80, 9.431448254773942}, {
+                    80, 11.931448254773942`}}]], 
+                    LineBox[{{79, 11.559563549711395`}, {
+                    81, 10.90333295983649}}], 
+                    CircleBox[{80, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 80->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{80, 5 3^Rational[1, 2]}, {
+                    81, 2 + 5 3^Rational[1, 2]}, {82, 5 3^Rational[1, 2]}}, {{
+                    80, 8.660254037844386}, {81, 10.660254037844386`}, {
+                    82, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{81, 2 + 5 3^Rational[1, 2]}, {
+                    81, 13.160254037844386`}}, {{81, 10.660254037844386`}, {
+                    81, 13.160254037844386`}}]], 
+                    LineBox[{{80, 12.960254037844386`}, {
+                    82, 11.960254037844386`}}], 
+                    CircleBox[{81, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 81->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    81 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    82, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    83 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{81.0190983005625, 
+                    9.510565162951535}, {82, 11.510565162951535`}, {
+                    82.9809016994375, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    82, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    82, 14.010565162951535`}}, {{82, 11.510565162951535`}, {
+                    82, 14.010565162951535`}}]], 
+                    LineBox[{{81, 13.791466862389028`}, {
+                    83, 12.82966346351404}}], 
+                    CircleBox[{82, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 82->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    82 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    83, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    84 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{82.13819660112502, 
+                    9.945218953682733}, {83, 11.945218953682733`}, {
+                    83.86180339887498, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{83, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    83, 14.445218953682733`}}, {{83, 11.945218953682733`}, {
+                    83, 14.445218953682733`}}]], 
+                    LineBox[{{82, 14.107022352557722`}, {
+                    84, 13.383415554807744`}}], 
+                    CircleBox[{83, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 83->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    83 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}, {
+                    84, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    85 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[1, 30] Pi]}}, {{83.39270509831249, 
+                    9.945218953682733}, {84, 11.945218953682733`}, {
+                    84.60729490168751, 9.945218953682733}}]], 
+                    LineBox[
+                    NCache[{{84, 2 + 10 Cos[Rational[1, 30] Pi]}, {
+                    84, 14.445218953682733`}}, {{84, 11.945218953682733`}, {
+                    84, 14.445218953682733`}}]], 
+                    LineBox[{{83, 13.85251385537025}, {
+                    85, 13.637924051995217`}}], 
+                    CircleBox[{84, 14.945218953682733`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 84->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    84 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    85, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    86 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{84.72360679774998, 
+                    9.510565162951535}, {85, 11.510565162951535`}, {
+                    85.27639320225002, 9.510565162951535}}]], 
+                    LineBox[
+                    NCache[{{
+                    85, 2 + 10 (Rational[5, 8] + 
+                    Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    85, 14.010565162951535`}}, {{85, 11.510565162951535`}, {
+                    85, 14.010565162951535`}}]], 
+                    LineBox[{{84, 13.086958365201555`}, {
+                    86, 13.534171960701512`}}], 
+                    CircleBox[{85, 14.510565162951535`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 85->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{86, 5 3^Rational[1, 2]}, {
+                    86, 2 + 5 3^Rational[1, 2]}, {86, 5 3^Rational[1, 2]}}, {{
+                    86, 8.660254037844386}, {86, 10.660254037844386`}, {
+                    86, 8.660254037844386}}]], 
+                    LineBox[
+                    NCache[{{86, 2 + 5 3^Rational[1, 2]}, {
+                    86, 13.160254037844386`}}, {{86, 10.660254037844386`}, {
+                    86, 13.160254037844386`}}]], 
+                    LineBox[{{85, 11.960254037844386`}, {
+                    87, 12.960254037844386`}}], 
+                    CircleBox[{86, 13.660254037844386`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 86->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    86 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}, {
+                    87, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    88 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 10 
+                    Cos[Rational[7, 30] Pi]}}, {{87.08541019662496, 
+                    7.431448254773942}, {87, 9.431448254773942}, {
+                    86.91458980337504, 7.431448254773942}}]], 
+                    LineBox[
+                    NCache[{{87, 2 + 10 Cos[Rational[7, 30] Pi]}, {
+                    87, 11.931448254773942`}}, {{87, 9.431448254773942}, {
+                    87, 11.931448254773942`}}]], 
+                    LineBox[{{86, 10.646038058148974`}, {
+                    88, 11.816858451398911`}}], 
+                    CircleBox[{87, 12.431448254773942`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 87->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    87 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}, {
+                    88, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    89 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 
+                    10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+                    Rational[1, 2]}}, {{87.91631189606247, 
+                    5.877852522924732}, {88, 7.877852522924732}, {
+                    88.08368810393753, 5.877852522924732}}]], 
+                    LineBox[
+                    NCache[{{
+                    88, 2 + 10 (Rational[5, 8] + 
+                    Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2]}, {
+                    88, 10.377852522924732`}}, {{88, 7.877852522924732}, {
+                    88, 10.377852522924732`}}]], 
+                    LineBox[{{87, 9.261540626862267}, {
+                    89, 10.094164418987194`}}], 
+                    CircleBox[{88, 10.877852522924732`}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 88->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    88 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}, {
+                    89, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    90 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[2, 15] Pi]}}, {{88.55278640450004, 
+                    4.0673664307580015`}, {89, 6.0673664307580015`}, {
+                    89.44721359549996, 4.0673664307580015`}}]], 
+                    LineBox[
+                    NCache[{{89, 2 + 10 Sin[Rational[2, 15] Pi]}, {
+                    89, 8.567366430758002}}, {{89, 6.0673664307580015`}, {
+                    89, 8.567366430758002}}]], 
+                    LineBox[{{88, 7.814580026257959}, {
+                    90, 7.920152835258044}}], 
+                    CircleBox[{89, 9.067366430758002}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 89->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    89 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}, {
+                    90, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    91 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 10 
+                    Sin[Rational[1, 15] Pi]}}, {{89.17188470506255, 
+                    2.079116908177593}, {90, 4.079116908177593}, {
+                    90.82811529493745, 2.079116908177593}}]], 
+                    LineBox[
+                    NCache[{{90, 2 + 10 Sin[Rational[1, 15] Pi]}, {
+                    90, 6.579116908177593}}, {{90, 4.079116908177593}, {
+                    90, 6.579116908177593}}]], 
+                    LineBox[{{89, 6.207232203115046}, {
+                    91, 5.551001613240141}}], 
+                    CircleBox[{90, 7.079116908177593}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 90->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{90, 0}, {91, 2}, {92, 0}}], 
+                    LineBox[{{91, 2}, {91, 4.5}}], 
+                    LineBox[{{90, 4.3}, {92, 3.3}}], 
+                    CircleBox[{91, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 91->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    91 + Rational[1, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {92, 2}, {
+                    93 + Rational[1, 10] (-1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    91.0190983005625, 0}, {92, 2}, {92.9809016994375, 0}}]], 
+                    LineBox[{{92, 2}, {92, 4.5}}], 
+                    LineBox[{{91, 4.280901699437495}, {
+                    93, 3.319098300562505}}], CircleBox[{92, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 92->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    92 + Rational[1, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {93, 2}, {
+                    94 + Rational[1, 5] (-1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    92.13819660112502, 0}, {93, 2}, {93.86180339887498, 0}}]],
+                     LineBox[{{93, 2}, {93, 4.5}}], 
+                    LineBox[{{92, 4.161803398874989}, {
+                    94, 3.4381966011250102`}}], CircleBox[{93, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 93->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    93 + Rational[3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {94, 2}, {
+                    95 + Rational[-3, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    93.39270509831249, 0}, {94, 2}, {94.60729490168751, 0}}]],
+                     LineBox[{{94, 2}, {94, 4.5}}], 
+                    LineBox[{{93, 3.9072949016875156`}, {
+                    95, 3.692705098312484}}], CircleBox[{94, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 94->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    94 + Rational[2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {95, 2}, {
+                    96 + Rational[-2, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    94.72360679774998, 0}, {95, 2}, {95.27639320225002, 0}}]],
+                     LineBox[{{95, 2}, {95, 4.5}}], 
+                    LineBox[{{94, 3.5763932022500207`}, {
+                    96, 4.023606797749979}}], CircleBox[{95, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 95->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{96, 0}, {96, 2}, {96, 0}}], 
+                    LineBox[{{96, 2}, {96, 4.5}}], 
+                    LineBox[{{95, 3.3}, {97, 4.3}}], 
+                    CircleBox[{96, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 96->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    96 + Rational[3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}, {97, 2}, {
+                    98 + Rational[-3, 5] (1 + 
+                    Rational[1, 4] (1 + 5^Rational[1, 2])), 0}}, {{
+                    97.08541019662496, 0}, {97, 2}, {96.91458980337504, 0}}]],
+                     LineBox[{{97, 2}, {97, 4.5}}], 
+                    LineBox[{{96, 3.2145898033750315`}, {
+                    98, 4.385410196624968}}], CircleBox[{97, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 97->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    97 + Rational[7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}, {98, 2}, {
+                    99 + Rational[-7, 10] (1 + 
+                    Rational[1, 4] (-1 + 5^Rational[1, 2])), 0}}, {{
+                    97.91631189606247, 0}, {98, 2}, {98.08368810393753, 0}}]],
+                     LineBox[{{98, 2}, {98, 4.5}}], 
+                    LineBox[{{97, 3.3836881039375366`}, {
+                    99, 4.216311896062463}}], CircleBox[{98, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 98->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    98 + Rational[4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}, {99, 2}, {
+                    100 + Rational[-4, 5] (1 + 
+                    Rational[1, 4] (1 - 5^Rational[1, 2])), 0}}, {{
+                    98.55278640450004, 0}, {99, 2}, {99.44721359549996, 0}}]],
+                     LineBox[{{99, 2}, {99, 4.5}}], 
+                    LineBox[{{98, 3.7472135954999577`}, {
+                    100, 3.852786404500042}}], CircleBox[{99, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 99->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], 
+                    LineBox[
+                    NCache[{{
+                    99 + Rational[9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}, {100, 2}, {
+                    101 + Rational[-9, 10] (1 + 
+                    Rational[1, 4] (-1 - 5^Rational[1, 2])), 0}}, {{
+                    99.17188470506255, 0}, {100, 2}, {
+                    100.82811529493745`, 0}}]], 
+                    LineBox[{{100, 2}, {100, 4.5}}], 
+                    LineBox[{{99, 4.128115294937452}, {
+                    101, 3.471884705062547}}], CircleBox[{100, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}], 100->
+                RowBox[{"{", 
+                 RowBox[{
+                  GraphicsBox[{
+                    {RGBColor[0.88, 1, 0.88], 
+                    RectangleBox[{0, 0}, {101, 20}]}, 
+                    {GrayLevel[0], 
+                    {GrayLevel[0], LineBox[{{100, 0}, {101, 2}, {102, 0}}], 
+                    LineBox[{{101, 2}, {101, 4.5}}], 
+                    LineBox[{{100, 4.3}, {102, 3.3}}], 
+                    CircleBox[{101, 5.}, 0.5]}}},
+                   ImageSize->Full], ",", "Null"}], "}"}]}, 
+                Dynamic[$CellContext`i11$$],
+                Alignment->Automatic,
+                ImageSize->All,
+                TransitionDirection->Horizontal,
+                TransitionDuration->0.5,
+                TransitionEffect->Automatic],
+               Identity,
+               Editable->True,
+               Selectable->True],
+              ImageMargins->10],
+             Deployed->False,
+             StripOnInput->False,
+             ScriptLevel->0,
+             GraphicsBoxOptions->{PreserveImageOptions->True},
+             Graphics3DBoxOptions->{PreserveImageOptions->True}],
+            Identity,
+            Editable->False,
+            Selectable->False],
+           Alignment->{Left, Center},
+           Background->GrayLevel[1],
+           Frame->1,
+           FrameStyle->GrayLevel[0, 0.2],
+           ItemSize->Automatic,
+           StripOnInput->False]}
+        },
+        AutoDelete->False,
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Top}}, 
+          "RowsIndexed" -> {}},
+        GridBoxDividers->{
+         "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+          "RowsIndexed" -> {}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.7], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.7]}, "ColumnsIndexed" -> {}, "Rows" -> {
+            Offset[0.4], {
+             Offset[0.8]}, 
+            Offset[0.4]}, "RowsIndexed" -> {}}], If[
+        And[
+         CurrentValue["NotebookSelected"], 
+         CurrentValue["SelectionOver"]], 
+        Manipulate`Dump`ReadControllerState[
+         Map[Manipulate`Dump`updateOneVar[#, 
+           CurrentValue["PreviousFormatTime"], 
+           CurrentValue["CurrentFormatTime"]]& , {
+           
+           Manipulate`Dump`controllerLink[{$CellContext`i11$$, \
+$CellContext`i11$7576$$}, "X1", 
+            If["DefaultAbsolute", True, "JB1"], False, {1, 100, 1}, 100, 
+            1.]}], 
+         CurrentValue[{
+          "ControllerData", {
+           "Gamepad", "Joystick", "Multi-Axis Controller"}}], {}]],
+       ImageSizeCache->{646., {89.25, 96.25}}],
+      DefaultBaseStyle->{},
+      FrameMargins->{{5, 5}, {5, 5}}],
+     BaselinePosition->Automatic,
+     ImageMargins->0],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "ListAnimate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.66644185651672*^9, 3.666441878031397*^9}, {
+  3.6664422937857137`*^9, 3.6664422946652045`*^9}, {3.6664423511213236`*^9, 
+  3.666442376335581*^9}}]
+}, Open  ]]
+},
+WindowSize->{718, 868},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 7, 181, "Text"],
+Cell[CellGroupData[{
+Cell[908, 31, 5107, 131, 452, "Input"],
+Cell[6018, 164, 107558, 2187, 222, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
